@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+PRODUCT_CHARACTERISTICS := tablet
+
 # Also get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/lt02ltexx-common/lt02ltexx-common-vendor.mk)
 

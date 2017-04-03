@@ -14,10 +14,10 @@
 # limitations under the License.
 
 # Also get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/serrano-common/serrano-common-vendor.mk)
+$(call inherit-product, vendor/samsung/lt02ltexx-common/lt02ltexx-common-vendor.mk)
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/serrano-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/lt02ltexx-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -142,8 +142,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Gello
 
-# call common serrano system props
-$(call inherit-product, device/samsung/serrano-common/system_prop.mk)
+# call common lt02ltexx system props
+$(call inherit-product, device/samsung/lt02ltexx-common/system_prop.mk)
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)

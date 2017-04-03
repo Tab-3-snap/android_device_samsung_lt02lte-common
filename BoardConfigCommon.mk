@@ -25,9 +25,9 @@
 -include device/samsung/msm8930-common/BoardConfigCommon.mk
 
 # Inherit from proprietary vendor
--include vendor/samsung/serrano-common/BoardConfigVendor.mk
+-include vendor/samsung/lt02ltexx-common/BoardConfigVendor.mk
 
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/serrano-common/include
+TARGET_SPECIFIC_HEADER_PATH := device/samsung/lt02ltexx-common/include
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=22 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1
@@ -35,18 +35,14 @@ BOARD_KERNEL_BASE := 0x80200000
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x02000000
 BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8930-common
-ifneq ($(filter serranoltespr serranolteusc,$(TARGET_DEVICE)),)
-TARGET_KERNEL_CONFIG := samsung_serrano_usa_defconfig
-else
-TARGET_KERNEL_CONFIG := samsung_serrano_defconfig
-endif
+TARGET_KERNEL_CONFIG := lineageos_lt02ltexx_defconfig
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8960
 
 # Recovery
 LZMA_RAMDISK_TARGETS := recovery
-TARGET_RECOVERY_FSTAB := device/samsung/serrano-common/rootdir/fstab.qcom
+TARGET_RECOVERY_FSTAB := device/samsung/lt02ltexx-common/rootdir/fstab.qcom
 
 # Filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -61,7 +57,7 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 209715200
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/serrano-common/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02ltexx-common/bluetooth
 
 # FM
 AUDIO_FEATURE_ENABLED_FM_POWER_OPT := true
@@ -82,14 +78,14 @@ TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
 # RIL
 TARGET_RIL_VARIANT := caf
 BOARD_GLOBAL_CFLAGS += -DDISABLE_ASHMEM_TRACKING
-BOARD_RIL_CLASS := ../../../device/samsung/serrano-common/ril/
+BOARD_RIL_CLASS := ../../../device/samsung/lt02ltexx-common/ril/
 
 # Time service
 BOARD_USES_QC_TIME_SERVICES := true
 
 # CMHW
-BOARD_HARDWARE_CLASS += device/samsung/serrano-common/cmhw
+BOARD_HARDWARE_CLASS += device/samsung/lt02ltexx-common/cmhw
 
 ifeq ($(WITH_TWRP),true)
--include device/samsung/serrano-common/twrp.mk
+-include device/samsung/lt02ltexx-common/twrp.mk
 endif

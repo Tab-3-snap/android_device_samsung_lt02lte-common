@@ -3,9 +3,6 @@ bin/btnvtool
 bin/hci_qcomm_init
 lib/libbtnv.so
 
-# FM Radio
-bin/fm_qsoc_patches
-
 # Thermal
 bin/mpdecision
 bin/thermald

@@ -253,13 +253,6 @@ service p2p_supplicant /system/bin/wpa_supplicant \
     disabled
     oneshot
 
-service fm_dl /system/bin/sh /system/etc/init.qcom.fm.sh
-    class late_start
-    user root
-    group system
-    disabled
-    oneshot
-
 service qcom-audio /system/bin/sh /system/etc/init.qcom.audio.sh
    class late_start
    user root

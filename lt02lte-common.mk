@@ -16,10 +16,10 @@
 PRODUCT_CHARACTERISTICS := tablet
 
 # Also get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/lt02ltexx-common/lt02ltexx-common-vendor.mk)
+$(call inherit-product, vendor/samsung/lt02lte-common/lt02lte-common-vendor.mk)
 
 # Common overlay
-DEVICE_PACKAGE_OVERLAYS += device/samsung/lt02ltexx-common/overlay
+DEVICE_PACKAGE_OVERLAYS += device/samsung/lt02lte-common/overlay
 
 # Device uses high-density artwork where available
 PRODUCT_AAPT_CONFIG := normal
@@ -138,8 +138,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
 
-# call common lt02ltexx system props
-$(call inherit-product, device/samsung/lt02ltexx-common/system_prop.mk)
+# call common lt02lte system props
+$(call inherit-product, device/samsung/lt02lte-common/system_prop.mk)
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)

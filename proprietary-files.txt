@@ -1,22 +1,3 @@
-# Misc lt02 blobs FIXME
-vendor/lib/libc2d30.so
-vendor/lib/libOpenCL.so
-lib/libxml.so
-lib/libsensor1.so
-lib/libsecril-client.so
-lib/libqc-opt.so
-lib/libomission_avoidance.so
-lib/libmm-color-convertor.so
-lib/libcordon.so
-lib/libTimeService.so
-lib/libOmxWmaDec.so
-lib/libOmxQcelp13Dec.so
-lib/libOmxMux.so
-lib/libOmxEvrcDec.so
-lib/libOmxAmrwbplusDec.so
-lib/libOmxAacDec.so
-lib/libI420colorconvert.so
-
 # Bluetooth
 bin/btnvtool
 bin/hci_qcomm_init

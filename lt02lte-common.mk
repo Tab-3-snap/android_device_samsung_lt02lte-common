@@ -33,6 +33,10 @@ TARGET_SCREEN_WIDTH := 600
 PRODUCT_PACKAGES += \
     libgenlock
 
+# Gello
+PRODUCT_PACKAGES += \
+    Gello
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \

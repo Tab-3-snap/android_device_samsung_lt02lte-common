@@ -313,4 +313,7 @@
          policy/src/com/android/internal/policy/impl/PhoneWindowManager.java
     -->
     <integer name="config_longPressOnHomeBehavior">2</integer>
+
+    <!-- Our amoled doesn't animate well. needed for crt effect -->
+    <bool name="config_animateScreenLights">true</bool>
 </resources>

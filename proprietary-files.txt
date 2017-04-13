@@ -123,8 +123,4 @@ lib/libTsAwb.so
 vendor/lib/libqti-perfd-client.so
 
 # DRM
-bin/insthk
-bin/qseecomd
-lib/libhdcp2.so
-lib/libQSEEComAPI.so
 vendor/lib/mediadrm/libwvdrmengine.so

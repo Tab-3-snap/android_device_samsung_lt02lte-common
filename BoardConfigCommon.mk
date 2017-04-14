@@ -59,6 +59,9 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 # Dexpreopt To lower the first boot time
 WITH_DEXPREOPT := true
 
+# Liblights
+TARGET_PROVIDES_LIBLIGHT := true
+
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/samsung/lt02lte-common/bluetooth
 

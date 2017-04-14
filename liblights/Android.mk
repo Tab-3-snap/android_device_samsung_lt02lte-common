@@ -20,14 +20,6 @@ LOCAL_PATH := $(call my-dir)
 # hw/<COPYPIX_HARDWARE_MODULE_ID>.<ro.board.platform>.so
 include $(CLEAR_VARS)
 
-ifeq ($(BOARD_HAVE_GENERIC_BLN),true)
-    LOCAL_CFLAGS += -DGENERIC_BLN
-endif
-
-ifeq ($(BOARD_HAVE_MULTI_COLOR_LED),true)
-    LOCAL_CFLAGS += -DMULTI_COLOR_LED
-endif
-
 LOCAL_SRC_FILES := lights.c
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_SHARED_LIBRARIES := liblog

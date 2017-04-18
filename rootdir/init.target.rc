@@ -83,6 +83,12 @@ on post-fs-data
     chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
     chmod 0666 /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
 
+    # Allow the radio to control the rment channel
+    chown radio radio /sys/module/f_rmnet/parameters/rmnet_ctl_ch
+    chown radio radio /sys/module/rmnet/parameters/rmnet_ctl_ch
+    chmod 666 /sys/module/f_rmnet/parameters/rmnet_ctl_ch
+    chmod 666 /sys/module/rmnet/parameters/rmnet_ctl_ch
+
     # Sensors
     write /sys/class/input/input5/distortion "400 50 15"
     write /sys/class/input/input6/distortion "400 50 15"

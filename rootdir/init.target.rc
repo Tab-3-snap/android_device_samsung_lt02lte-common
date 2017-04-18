@@ -79,6 +79,10 @@ on post-fs-data
     chown system root /data/.psm.info
     chmod 0660 /data/.psm.info
 
+    # Allow QMUX daemon to assign port open wait time
+    chown radio radio /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+    chmod 0666 /sys/devices/virtual/hsicctl/hsicctl0/modem_wait
+
     # Sensors
     write /sys/class/input/input5/distortion "400 50 15"
     write /sys/class/input/input6/distortion "400 50 15"

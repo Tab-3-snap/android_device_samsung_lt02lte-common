@@ -33,10 +33,6 @@ TARGET_SCREEN_WIDTH := 600
 PRODUCT_PACKAGES += \
     libgenlock
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # Prima opensource driver files
 PRODUCT_COPY_FILES += \
     device/samsung/lt02lte-common/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
@@ -143,6 +139,7 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
+
 
 # call common lt02lte system props
 $(call inherit-product, device/samsung/lt02lte-common/system_prop.mk)

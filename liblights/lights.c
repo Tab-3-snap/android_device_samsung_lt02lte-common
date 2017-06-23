@@ -15,18 +15,17 @@
  * limitations under the License.
  */
 
-
 // #define LOG_NDEBUG 0
 
 #include <cutils/log.h>
 
-#include <stdint.h>
-#include <string.h>
-#include <unistd.h>
 #include <errno.h>
 #include <fcntl.h>
 #include <malloc.h>
 #include <pthread.h>
+#include <stdint.h>
+#include <string.h>
+#include <unistd.h>
 
 #include <sys/ioctl.h>
 #include <sys/types.h>
@@ -38,22 +37,18 @@
 static pthread_once_t g_init = PTHREAD_ONCE_INIT;
 static pthread_mutex_t g_lock = PTHREAD_MUTEX_INITIALIZER;
 
-char const*const LCD_FILE
-        = "/sys/class/leds/lcd-backlight/brightness";
+char const* const LCD_FILE = "/sys/class/leds/lcd-backlight/brightness";
 
 /**
  * device methods
  */
 
-void init_globals(void)
-{
+void init_globals(void) {
     // init the mutex
     pthread_mutex_init(&g_lock, NULL);
 }
 
-static int
-write_int(char const* path, int value)
-{
+static int write_int(char const* path, int value) {
     int fd;
     static int already_warned = 0;
 
@@ -73,28 +68,22 @@ write_int(char const* path, int value)
     }
 }
 
-static int
-is_lit(struct light_state_t const* state)
-{
+static int is_lit(struct light_state_t const* state) {
     return state->color & 0x00ffffff;
 }
 
-static int
-rgb_to_brightness(struct light_state_t const* state)
-{
+static int rgb_to_brightness(struct light_state_t const* state) {
     int color = state->color & 0x00ffffff;
-    return ((77*((color>>16)&0x00ff))
-            + (150*((color>>8)&0x00ff)) + (29*(color&0x00ff))) >> 8;
+    return ((77 * ((color >> 16) & 0x00ff)) + (150 * ((color >> 8) & 0x00ff)) +
+            (29 * (color & 0x00ff))) >>
+           8;
 }
 
-static int
-set_light_backlight(struct light_device_t *dev,
-        struct light_state_t const* state)
-{
+static int set_light_backlight(struct light_device_t* dev, struct light_state_t const* state) {
     int err = 0;
     int brightness = rgb_to_brightness(state);
 
-    if(!dev) {
+    if (!dev) {
         return -1;
     }
 
@@ -105,9 +94,7 @@ set_light_backlight(struct light_device_t *dev,
 }
 
 /** Close the lights device */
-static int
-close_lights(struct light_device_t *dev)
-{
+static int close_lights(struct light_device_t* dev) {
     if (dev) {
         free(dev);
     }
@@ -122,10 +109,8 @@ close_lights(struct light_device_t *dev)
 
 /** Open a new instance of a lights device using name */
 static int open_lights(const struct hw_module_t* module, char const* name,
-        struct hw_device_t** device)
-{
-    int (*set_light)(struct light_device_t *dev,
-            struct light_state_t const* state);
+                       struct hw_device_t** device) {
+    int (*set_light)(struct light_device_t * dev, struct light_state_t const* state);
 
     if (0 == strcmp(LIGHT_ID_BACKLIGHT, name))
         set_light = set_light_backlight;
@@ -134,10 +119,9 @@ static int open_lights(const struct hw_module_t* module, char const* name,
 
     pthread_once(&g_init, init_globals);
 
-    struct light_device_t *dev = malloc(sizeof(struct light_device_t));
+    struct light_device_t* dev = malloc(sizeof(struct light_device_t));
 
-    if(!dev)
-        return -ENOMEM;
+    if (!dev) return -ENOMEM;
 
     memset(dev, 0, sizeof(*dev));
 

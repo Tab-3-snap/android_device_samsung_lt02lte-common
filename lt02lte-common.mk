@@ -96,14 +96,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:system/etc/sec_config
 
-# GPS config
+# Prima opensource driver files
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/gps.conf:system/etc/gps.conf \
-    $(LOCAL_PATH)/configs/sap.conf:system/etc/sap.conf
+    $(LOCAL_PATH)/prima/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
+    $(LOCAL_PATH)/prima/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
+    $(LOCAL_PATH)/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin
 
 # GPS HAL
 PRODUCT_PACKAGES += \
-    gps.msm8960
+    gps.msm8960 \
+    gps.conf \
+    sap.conf
 
 # Lights
 PRODUCT_PACKAGES += \
@@ -139,7 +142,6 @@ PRODUCT_PACKAGES += \
 # Voice processing
 PRODUCT_PACKAGES += \
     libqcomvoiceprocessing
-
 
 # call common lt02lte system props
 $(call inherit-product, device/samsung/lt02lte-common/system_prop.mk)

@@ -138,8 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_camera \
-    libshim_ril
+    libshim_camera
 
 # Doze
 PRODUCT_PACKAGES += \

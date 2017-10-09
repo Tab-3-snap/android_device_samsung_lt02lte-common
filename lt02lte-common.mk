@@ -145,10 +145,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     Snap
 
-# Voice processing
-PRODUCT_PACKAGES += \
-    libqcomvoiceprocessing
-
 # call common lt02lte system props
 $(call inherit-product, device/samsung/lt02lte-common/system_prop.mk)
 

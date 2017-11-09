@@ -61,7 +61,6 @@ bin/time_daemon|82c6bc44bbda6aaa8f5c5ca62770d9c8bba0729d
 
 # GPS
 bin/irsc_util
-lib/libloc_api_v02.so
 vendor/lib/libgeofence.so
 vendor/lib/libizat_core.so
 vendor/lib/liblbs_core.so

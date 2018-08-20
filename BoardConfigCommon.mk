@@ -29,6 +29,9 @@ COMMON_PATH := device/samsung/lt02lte-common
 # Inherit from proprietary vendor
 -include vendor/samsung/lt02lte-common/BoardConfigVendor.mk
 
+# Includes
+TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
+
 # The first api level the device has commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 19
 

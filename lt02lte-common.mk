@@ -1,3 +1,4 @@
+
 # Copyright (C) 2013-2016, The CyanogenMod Project
 # Copyright (C) 2017, The LineageOS Project
 #
@@ -89,8 +90,8 @@ PRODUCT_COPY_FILES += \
 
 # Etc scripts
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/rootdir/vendor/etc/init.qcom.audio.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qcom.audio.sh \
-    $(LOCAL_PATH)/rootdir/vendor/etc/init.qcom.bt.sh:$(TARGET_COPY_OUT_VENDOR)/etc/init.qcom.bt.sh
+    $(LOCAL_PATH)/rootdir/vendor/bin/init.qcom.audio.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.audio.sh \
+    $(LOCAL_PATH)/rootdir/vendor/bin/init.qcom.bt.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qcom.bt.sh
 
 # GPS/location security configuration file
 PRODUCT_COPY_FILES += \

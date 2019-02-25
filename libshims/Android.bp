@@ -1,5 +1,5 @@
 cc_library_shared {
-    name: "libshim_camera_serrano",
+    name: "libshim_camera_lt02lte",
     srcs: [
         "bionic/bionic_time_conversions.cpp",
         "bionic/pthread_cond.cpp",

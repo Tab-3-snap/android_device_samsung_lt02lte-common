@@ -1,7 +1,7 @@
 cc_binary {
-    name: "android.hardware.power@1.0-service.serrano",
+    name: "android.hardware.power@1.0-service.lt02lte",
     relative_install_path: "hw",
-    init_rc: ["android.hardware.power@1.0-service.serrano.rc"],
+    init_rc: ["android.hardware.power@1.0-service.lt02lte.rc"],
     srcs: [
         "service.cpp",
         "Power.cpp",

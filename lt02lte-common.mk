@@ -122,10 +122,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.lt02lte
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.lt02lte
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.lt02lte

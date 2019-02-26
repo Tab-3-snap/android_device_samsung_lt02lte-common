@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "android.hardware.power@1.0-service.lt02lte"
+#define LOG_TAG "android.hardware.power@1.0-service.serrano"
 
 #include <android/log.h>
 #include <utils/Log.h>

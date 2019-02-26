@@ -87,7 +87,7 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 # Camera
 TARGET_NEED_DISABLE_AUTOFOCUS := true
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/bin/mm-qcamera-daemon|libshim_camera_lt02lte.so
+    /system/vendor/bin/mm-qcamera-daemon|libshim_camera_serrano.so
 TARGET_NEED_DISABLE_FACE_DETECTION := true
 TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
 

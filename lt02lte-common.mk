@@ -120,15 +120,19 @@ PRODUCT_PACKAGES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.lt02lte
+    android.hardware.light@2.0-service.serrano
+
+# Vibrator
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-service.serrano
 
 # USB
 PRODUCT_PACKAGES += \
-    android.hardware.usb@1.0-service.lt02lte
+    android.hardware.usb@1.0-service.serrano
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.0-service.lt02lte
+    android.hardware.power@1.0-service.serrano
 
 # IPv6 tethering
 PRODUCT_PACKAGES += \
@@ -141,7 +145,7 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_camera_lt02lte
+    libshim_camera_serrano
 
 # Doze
 PRODUCT_PACKAGES += \
@@ -154,8 +158,8 @@ PRODUCT_PACKAGES += \
 # call common lt02lte system props
 $(call inherit-product, device/samsung/lt02lte-common/system_prop.mk)
 
-# call common lt02lte system debug props
-#$(call inherit-product, device/samsung/lt02lte-common/system_prop_debug.mk)
+# call common serrano system debug props
+#$(call inherit-product, device/samsung/serrano-common/system_prop_debug.mk)
 
 # call common msm8930
 $(call inherit-product, device/samsung/msm8930-common/msm8930.mk)

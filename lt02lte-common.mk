@@ -122,10 +122,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-service.serrano
 
-# Vibrator
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.0-service.serrano
-
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.serrano

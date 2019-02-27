@@ -103,8 +103,8 @@ TARGET_RIL_VARIANT := caf
 JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_serrano
-TARGET_RECOVERY_DEVICE_MODULES := libinit_serrano
+TARGET_INIT_VENDOR_LIB := libinit_lt02lte
+TARGET_RECOVERY_DEVICE_MODULES := libinit_lt02lte
 
 ifeq ($(WITH_TWRP),true)
 -include $(COMMON_PATH)/twrp.mk

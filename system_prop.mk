@@ -22,13 +22,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.hwui.use_buffer_age=false \
-    persist.debug.wfd.enable=1 \
-    persist.sys.wfd.virtual=0 \
     ro.sf.lcd_density=160 \
     ro.opengles.version=196608 \
     ro.qualcomm.cabl=0 \
-    ro.hwui.text_large_cache_height=2048 \
-    ro.sf.hwrotation=270
+    ro.hwui.text_large_cache_height=2048
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \

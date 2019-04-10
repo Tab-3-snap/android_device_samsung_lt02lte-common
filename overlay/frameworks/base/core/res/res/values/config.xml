@@ -344,5 +344,7 @@
         <item>"/system/framework/boot.vdex"</item>
         <item>"/system/framework/arm/boot-core-libart.oat"</item>
         <item>"/system/framework/boot-core-libart.vdex"</item>
+        <item>"/system/framework/arm/boot-QPerformance.oat"</item>
+        <item>"/system/framework/arm/boot-UxPerformance.oat"</item
     </string-array>
 </resources>

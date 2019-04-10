@@ -140,8 +140,8 @@ PRODUCT_PACKAGES += \
     mkfs.f2fs
 
 # Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
+# PRODUCT_PACKAGES += \
+#    SamsungDoze
 
 # Camera
 PRODUCT_PACKAGES += \

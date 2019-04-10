@@ -32,9 +32,6 @@ COMMON_PATH := device/samsung/lt02lte-common
 # Includes
 TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
 
-# Includes
-TARGET_SPECIFIC_HEADER_PATH += $(COMMON_PATH)/include
-
 # The first api level the device has commercially launched on
 PRODUCT_SHIPPING_API_LEVEL := 19
 
@@ -100,11 +97,11 @@ TARGET_NEED_DISABLE_FACE_DETECTION := true
 TARGET_NEED_DISABLE_FACE_DETECTION_BOTH_CAMERAS := true
 
 # RIL
-BOARD_PROVIDES_LIBRIL := true
-TARGET_RIL_VARIANT := caf
+# BOARD_PROVIDES_LIBRIL := true
+# TARGET_RIL_VARIANT := caf
 
 # LineageHW
-JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
+# JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(COMMON_PATH)/lineagehw|**/*.java
 
 # Vendor init
 TARGET_INIT_VENDOR_LIB := libinit_lt02lte
